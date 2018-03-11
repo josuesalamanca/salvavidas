@@ -80,9 +80,4 @@ Algoritmo sin_titu
 			
 		FinSi
 	Hasta Que 1==2
-	
-	
-	
-
-	
 FinAlgoritmo
