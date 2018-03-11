@@ -170,15 +170,20 @@ Algoritmo taller
 				Dimension numero1[4];
 				Dimension numero2[4]
 				
-				numero1[1] = Subcadena(n1,1,1);
-				numero1[2] = Subcadena(n1,2,2);
-				numero1[3] = Subcadena(n1,3,3);
-				numero1[4] = Subcadena(n1,4,4);
+//				numero1[1] = Subcadena(n1,1,1);
+//				numero1[2] = Subcadena(n1,2,2);
+//				numero1[3] = Subcadena(n1,3,3);
+//				numero1[4] = Subcadena(n1,4,4);
+//				
+//				numero2[1] = Subcadena(n2,1,1);
+//				numero2[2] = Subcadena(n2,2,2);
+//				numero2[3] = Subcadena(n2,3,3);
+//				numero2[4] = Subcadena(n2,4,4);
 				
-				numero2[1] = Subcadena(n2,1,1);
-				numero2[2] = Subcadena(n2,2,2);
-				numero2[3] = Subcadena(n2,3,3);
-				numero2[4] = Subcadena(n2,4,4);
+				para h=1 hasta 4 con paso 1 hacer
+					numero1[h] = Subcadena(n1,h,h);
+					numero2[h] = Subcadena(n2,h,h);
+				Fin Para
 				
 				
 				si abs((ConvertirANumero(n1)))>0 Entonces
