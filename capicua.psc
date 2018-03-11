@@ -214,7 +214,7 @@ Algoritmo taller
 			//		numero2[4] = Subcadena(n2,4,4);
 			
 			
-			si abs((ConvertirANumero(n1)))>0 Entonces
+			si (abs((ConvertirANumero(n1)))>0)&&(abs((ConvertirANumero(n2)))>0) Entonces
 				si (Longitud(n1)==4)&&(Longitud(n2)==4) Entonces
 					si ((numero1[1]!=numero1[2])&&(numero1[1]!=numero1[3])&&(numero1[1]!=numero1[4])&&(numero1[2]!=numero1[3])&&(numero1[2]!=numero1[4])&&(numero1[3]!=numero1[4])) && ((numero2[1]!=numero2[2])&&(numero2[1]!=numero2[3])&&(numero2[1]!=numero2[4])&&(numero2[2]!=numero2[3])&&(numero2[2]!=numero2[4])&&(numero2[3]!=numero2[4])) Entonces
 						contador = 0;
