@@ -32,7 +32,7 @@ Funcion a <- test ( tip )
 	FinSi
 Fin Funcion
 
-Algoritmo taller
+Algoritmo Taller
 	definir op Como Entero;
 	Imprimir "Seleccione lo que quiere hacer";
 	Leer op;
