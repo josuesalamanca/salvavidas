@@ -188,58 +188,84 @@ Algoritmo taller
 			escribir "este programa le dira si existen numeros concidientes y no concidientes"
 			escribir "en un numero de 4 cifras"
 			Definir n1, n2 Como caracter;
-			Repetir
-				Imprimir Sin Saltar "Ingrese el primer numero";
-				leer n1;
-				Imprimir Sin Saltar "Ingrese el segundo numero";
-				leer n2;
-				
-				Dimension numero1[4];
-				Dimension numero2[4]
-				
-				para h=1 hasta 4 con paso 1 hacer
-					numero1[h] = Subcadena(n1,h,h);
-					numero2[h] = Subcadena(n2,h,h);
-				Fin Para
-				
-				
-				si abs((ConvertirANumero(n1)))>0 Entonces
-					si (Longitud(n1)==4)&&(Longitud(n2)==4) Entonces
-						si ((numero1[1]!=numero1[2])&&(numero1[1]!=numero1[3])&&(numero1[1]!=numero1[4])&&(numero1[2]!=numero1[3])&&(numero1[2]!=numero1[4])&&(numero1[3]!=numero1[4])) && ((numero2[1]!=numero2[2])&&(numero2[1]!=numero2[3])&&(numero2[1]!=numero2[4])&&(numero2[2]!=numero2[3])&&(numero2[2]!=numero2[4])&&(numero2[3]!=numero2[4])) Entonces
-							contador = 0;
-							Dimension posCoinc[4];
-							//					Dimension posNoCoinc[4];
-							Para i=1 Hasta 4 Con Paso 1 Hacer
-								si numero1[i]==numero2[i] Entonces
-									contador = contador + 1;
-									posCoinc[i] = numero1[i];
-								FinSi
-							Fin Para
-							
-							si contador != 0 Entonces
-								si contador == 1
-									Imprimir "Hay ",contador," numero coincidente que es: ", posCoinc[1];
-								FinSi
-								si contador == 2
-									Imprimir "Hay ",contador," numeros coincidentes que son: ", posCoinc[1],", ",posCoinc[2];
-								FinSi
-								si contador == 3
-									Imprimir "Hay ",contador," numeros coincidentes que son: ", posCoinc[1],", ",posCoinc[2],", ",posCoinc[3];
-								FinSi
-								si contador == 4
-									Imprimir "Hay ",contador," numeros coincidentes que son: ", posCoinc[1],", ",posCoinc[2],", ",posCoinc[3],", ",posCoinc[4];
-								FinSi
+			Imprimir Sin Saltar "Ingrese el primer numero";
+			leer n1;
+			Imprimir Sin Saltar "Ingrese el segundo numero";
+			leer n2;
+			
+			tamañoDato = 4;
+			
+			Dimension numero1[tamañoDato];
+			Dimension numero2[tamañoDato]
+			
+			para h=1 hasta tamañoDato con paso 1 hacer
+				numero1[h] = Subcadena(n1,h,h);
+				numero2[h] = Subcadena(n2,h,h);
+			Fin Para
+			
+			//		numero1[1] = Subcadena(n1,1,1);
+			//		numero1[2] = Subcadena(n1,2,2);
+			//		numero1[3] = Subcadena(n1,3,3);
+			//		numero1[4] = Subcadena(n1,4,4);
+			//		
+			//		numero2[1] = Subcadena(n2,1,1);
+			//		numero2[2] = Subcadena(n2,2,2);
+			//		numero2[3] = Subcadena(n2,3,3);
+			//		numero2[4] = Subcadena(n2,4,4);
+			
+			
+			si abs((ConvertirANumero(n1)))>0 Entonces
+				si (Longitud(n1)==4)&&(Longitud(n2)==4) Entonces
+					si ((numero1[1]!=numero1[2])&&(numero1[1]!=numero1[3])&&(numero1[1]!=numero1[4])&&(numero1[2]!=numero1[3])&&(numero1[2]!=numero1[4])&&(numero1[3]!=numero1[4])) && ((numero2[1]!=numero2[2])&&(numero2[1]!=numero2[3])&&(numero2[1]!=numero2[4])&&(numero2[2]!=numero2[3])&&(numero2[2]!=numero2[4])&&(numero2[3]!=numero2[4])) Entonces
+						contador = 0;
+						Dimension posCoinc[tamañoDato];
+						Dimension posNoCoinc[tamañoDato];
+						
+						coinc = "";
+						noCoinc = "";
+						
+						Para i=1 Hasta 4 Con Paso 1 Hacer
+							si numero1[i]==numero2[i] Entonces
+								contador = contador + 1;
+								posCoinc[i] = numero1[i];
 							SiNo
-								Imprimir "No hay numeros coincidentes"
+								posNoCoinc[i] = numero1[i];
+							FinSi
+						Fin Para
+						
+						para j=1 Hasta 4 con paso 1 hacer
+							si posCoinc[j]!="" Entonces
+								coinc = coinc + posCoinc[j] + ", "	
+							FinSi
+							si posNocoinc[j]!="" entonces
+								noCoinc = noCoinc + posNoCoinc[j] + ", ";
+							FinSi
+							
+						FinPara
+						
+						si contador != 0 Entonces
+							si contador == 1
+								Imprimir "Hay ",contador," numero coincidente que es: ", coinc," y hay ",(tamañoDato-contador)," numeros no coincidentes que son: ",noCoinc;
+							FinSi
+							si contador == 2
+								Imprimir "Hay ",contador," numeros coincidentes que son: ", coinc," y hay ",(tamañoDato-contador)," numeros no coincidentes que son: ",noCoinc;
+							FinSi
+							si contador == 3
+								Imprimir "Hay ",contador," numeros coincidentes que son: ",coinc," y hay ",(tamañoDato-contador)," numero no coincidente que es: ",noCoinc;
+							FinSi
+							si contador == 4
+								Imprimir "Hay ",contador," numeros coincidentes que son: ", coinc;
 							FinSi
 						SiNo
-							Imprimir "ERROR! los digitos deben ser diferentes entre si";
+							Imprimir "No hay numeros coincidentes"
 						FinSi
 					SiNo
-						Imprimir "ERROR! Los numeros deben tener 4 digitos";
+						Imprimir "ERROR! los digitos deben ser diferentes entre si";
 					FinSi
+				SiNo
+					Imprimir "ERROR! Los numeros deben tener 4 digitos";
 				FinSi
-			Hasta Que 1==2
+			FinSi
 		7:
 			Imprimir "ha seleseccionado la opcion 7";
 			Imprimir "Este algoritmo calcula la comision que obtiene un vendedor";
