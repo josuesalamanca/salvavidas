@@ -189,7 +189,7 @@ Algoritmo taller
 			escribir "este programa le dira si existen numeros concidientes y no concidientes"
 			escribir "en un numero de 4 cifras"
 			Definir n1, n2 Como caracter;
-			repetir
+	
 			Imprimir Sin Saltar "Ingrese el primer numero";
 			leer n1;
 			Imprimir Sin Saltar "Ingrese el segundo numero";
@@ -268,7 +268,7 @@ Algoritmo taller
 					Imprimir "ERROR! Los numeros deben tener 4 digitos";
 				FinSi
 			FinSi
-		Hasta Que 1==2
+	
 		7:
 			Imprimir "ha seleseccionado la opcion 7";
 			Imprimir "Este algoritmo calcula la comision que obtiene un vendedor";
