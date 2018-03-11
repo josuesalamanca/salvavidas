@@ -31,7 +31,7 @@ Funcion a <- test ( tip )
 		a=0
 	FinSi
 Fin Funcion
-
+//la funcion anterior es una herramienta para verificar que los caracteres se comporten como numeros 
 Algoritmo taller
 	definir op Como Entero;
 	Escribir "1)  Leer un numero y saber si es o no capicua"
@@ -54,7 +54,7 @@ Algoritmo taller
 	escribir "-------------------------------------------------------------------------------------"
 	Escribir "10) Usar una calculadora que permite realizar las operaciones basicas"
 	escribir "-------------------------------------------------------------------------------------"
-	Imprimir Sin Saltar "Seleccione con el numero lo que quiere hacer"
+	Imprimir Sin Saltar "Seleccione con el numero lo que desea hacer"
 	Leer op;
 	Segun op hacer
 		1:
@@ -64,7 +64,7 @@ Algoritmo taller
 			
 			Definir ctam como entero
 			Definir a, b, c, d Como Caracter
-			//	se debe crear una funcion que de entrada permita caracteres y verifique
+			
 			Repetir
 				sm = 0
 				leer a
@@ -189,6 +189,7 @@ Algoritmo taller
 			escribir "este programa le dira si existen numeros concidientes y no concidientes"
 			escribir "en un numero de 4 cifras"
 			Definir n1, n2 Como caracter;
+			repetir
 			Imprimir Sin Saltar "Ingrese el primer numero";
 			leer n1;
 			Imprimir Sin Saltar "Ingrese el segundo numero";
@@ -267,6 +268,7 @@ Algoritmo taller
 					Imprimir "ERROR! Los numeros deben tener 4 digitos";
 				FinSi
 			FinSi
+		Hasta Que 1==2
 		7:
 			Imprimir "ha seleseccionado la opcion 7";
 			Imprimir "Este algoritmo calcula la comision que obtiene un vendedor";
