@@ -77,20 +77,19 @@ Algoritmo taller
 			
 			
 			Definir w, q  Como real
-			Definir c, e como entero
+			Escribir "digite dos numeros"
 			Escribir "este algoritmo le dira si el mayor es multiplo del menor"
-			escribir "habrá error de no cumplirse que el mayor es multiplo del menor"
+			
 			Repetir
 				
 				leer w, q
 				
-				Si a>b Entonces
-					p=w/q
-					
+				Si q%w==0 o w%q==0 Entonces
+			
 					Imprimir c, "el mayor es multiplo del menor"
 				SiNo
-					e=q/w
-					Imprimir d, "el mayor es multiplo del menor"
+					
+					Imprimir d, "el mayor no es multiplo del menor"
 				Fin Si
 			Hasta Que 1==3
 
