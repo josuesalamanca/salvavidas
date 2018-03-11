@@ -148,15 +148,15 @@ Algoritmo taller
 			
 			Escribir "digite 3 numeros"
 			Escribir "El progrma le dira si existen numeros iguales o si no"
-			Definir a, b, c Como Real
+			Definir t, u, k Como Real
 			
 			Repetir
 				
-				leer t, u, i
-				si t==u y u==i Entonces
+				leer t, u, k
+				si t==u y u==k Entonces
 					imprimir "todos son iguales"
 				SiNo
-					si t==u o u==i o i==t entonces 
+					si t==u o u==k o k==t entonces 
 						imprimir "dos son iguales"
 					SiNo
 						imprimir "ninguno es igual"
@@ -369,7 +369,7 @@ Algoritmo taller
 		Hasta Que 1==2
 		9:
 			Imprimir "ha seleseccionado la opcion 9";
-			Imprimir "este algoritmo calculas las raices de la ecuacion de segundo grado";
+			Imprimir "este algoritmo calcula las raices de la ecuacion de segundo grado";
 			definir ca, cb, cc Como Real;
 			Repetir
 				
@@ -385,15 +385,14 @@ Algoritmo taller
 			Imprimir d;
 			
 			si cd < 0 Entonces
-				//pre = (-cb)/(2*ca);
-				//pim = rc(-cd)/(2*ca);
-				//Imprimir "Raiz 1: ",pre," + ",pim,"i";
-				//Imprimir "Raiz 2: ",pre," - ",pim,"i";
-				Imprimir "las raices no son reales y el polinomio no es factorizable"
+				pre = (-cb)/(2*ca);
+				pim = rc(-cd)/(2*ca);
+				Imprimir "Raiz 1: ",pre," + ",pim,"i";
+				Imprimir "Raiz 2: ",pre," - ",pim,"i";
 			SiNo
 				si cd == 0 Entonces
 					r = (-cb)/(2*ca)
-					Imprimir "Raiz 1 = Raiz 2: ", r;
+					Imprimir "Raiz 1 = Raiz 2:+y- ", r;
 				SiNo
 					r1 = ((-cb)+rc(cd))/(2*ca)
 					r2 = ((-cb)-rc(cd))/(2*ca)
@@ -405,9 +404,11 @@ Algoritmo taller
 		10:
 			Imprimir "ha seleseccionado la opcion 10";
 			Imprimir "Este algoritmo es una calculadora que permite realizar las operaciones basicas";
+			Imprimir "introdusca le primera letra de la operación a realizar"
 			Definir operacion Como Caracter;
-			definir o1, o2, resultado Como Entero;
-			repetir
+			definir o1, o2 Como Entero;
+			Definir resultado como real
+		repetir
 			Imprimir Sin Saltar "Que tipo de operacion desea realizar?";
 			leer operacion;
 			
@@ -458,8 +459,9 @@ Algoritmo taller
 			si operacion != "S" && operacion != "s" && operacion != "R" && operacion != "r" && operacion != "P" && operacion != "p" && operacion != "M" && operacion != "m" && operacion != "D" && operacion != "d" entonces
 				Imprimir "Por favor seleccione una operacion valida: "
 			FinSi
+		hasta que 1==2
+		
 		De Otro Modo:
 			Imprimir "Por favor seleccione una opcion valida";
-			hasta que 1==2
-	FinSegun
+			FinSegun
 FinAlgoritmo
