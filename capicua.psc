@@ -34,7 +34,7 @@ Fin Funcion
 
 Algoritmo taller
 	definir op Como Entero;
-	Imprimir Sin Saltar "Seleccione lo que quiere hacer";
+	Imprimir Sin Saltar "Seleccione lo que quiere hacer"
 	Leer op;
 	Segun op hacer
 		1:
@@ -119,8 +119,45 @@ Algoritmo taller
 			FinSi
 		4:
 			Imprimir "ha seleseccionado la opcion 4";
+			
+			Escribir "digite 3 numeros"
+			Escribir "El progrma le dira si existen numeros iguales o si no"
+			Definir a, b, c Como Real
+			
+			Repetir
+				
+				leer t, u, i
+				si t==u y u==i Entonces
+					imprimir "todos son iguales"
+				SiNo
+					si t==u o u==i o i==t entonces 
+						imprimir "dos son iguales"
+					SiNo
+						imprimir "ninguno es igual"
+					FinSi
+				FinSi
+				
+			Hasta Que 1==2
+			
 		5:
 			Imprimir "ha seleseccionado la opcion 5";
+			
+			Definir f, p, s Como Real
+			escribir "digite las 3 notas del alumno"
+			Escribir "El programa le dirá si el alumno aprueba o reprueba el curso"
+			Repetir
+				leer f, p, s
+				
+				g=(f+p+s)/3
+				
+				si g>=3 Entonces
+					imprimir "aprobó el curso "
+				SiNo
+					imprimir "reprobó el curso"
+				FinSi
+				
+			Hasta Que 1==2
+			
 		6:
 			Imprimir "ha seleseccionado la opcion 6";
 		7:
