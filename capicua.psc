@@ -125,6 +125,47 @@ Algoritmo taller
 			Imprimir "ha seleseccionado la opcion 6";
 		7:
 			Imprimir "ha seleseccionado la opcion 7";
+			Imprimir "Este algoritmo calcula la comision que obtiene un vendedor";
+			Definir nombreCliente Como Caracter;
+			Definir valorUnitario Como Real;
+			Definir cantidadVendida Como Entero;
+			
+			Imprimir Sin Saltar "Ingrese el nombre del cliente: ";
+			leer nombreCliente;
+			Imprimir Sin Saltar "Ingrese el valor por unidad de la paca de cemento: ";
+			leer valorUnitario;
+			Imprimir Sin Saltar "Ingrese la cantidad de pacas de cemento vendidas: ";
+			leer cantidadVendida;
+			
+			totalVenta = valorUnitario * cantidadVendida;
+			
+			si (cantidadVendida < 5) Entonces
+				comision = totalVenta*0.12;
+				Imprimir "se vendieron ",cantidadVendida," pacas de cemento";
+				Imprimir "el valor total de la venta es: ",totalVenta;
+				Imprimir "la comision por esta venta es del 12%, que es: ", comision;
+			FinSi
+			
+			si (cantidadVendida >= 10)&&(cantidadVendida <= 25) Entonces
+				comision = totalVenta*0.3;
+				Imprimir "se vendieron ",cantidadVendida," pacas de cemento";
+				Imprimir "el valor total de la venta es: ",totalVenta;
+				Imprimir "la comision por esta venta es del 30%, que es: ", comision;
+			FinSi
+			
+			si (cantidadVendida >= 30)&&(cantidadVendida <= 50) Entonces
+				comision = totalVenta*0.38;
+				Imprimir "se vendieron ",cantidadVendida," pacas de cemento";
+				Imprimir "el valor total de la venta es: ",totalVenta;
+				Imprimir "la comision por esta venta es del 38%, que es: ", comision;
+			FinSi
+			
+			si (cantidadVendida>=5)&&(cantidadVendida<10)||(cantidadVendida>25)&&(cantidadVendida<30)||(cantidadVendida>50) Entonces
+				comision = totalVenta*0.06;
+				Imprimir "se vendieron ",cantidadVendida," pacas de cemento";
+				Imprimir "el valor total de la venta es: ",totalVenta;
+				Imprimir "la comision por esta venta es del 6%, que es: ", comision;
+			FinSi
 		8:
 			Imprimir "ha seleseccionado la opcion 8";
 			Definir dia,mes,año Como Entero;
@@ -191,8 +232,8 @@ Algoritmo taller
 			si n4 < 0 Entonces
 				pre = (-n2)/(2*n1);
 				pim = rc(-n4)/(2*n1);
-				Imprimir "Raiz 1: ",pre,"+",pim,"i";
-				Imprimir "Raiz 2: ",pre,"-",pim,"i";
+				Imprimir "Raiz 1: ",pre," + ",pim,"i";
+				Imprimir "Raiz 2: ",pre," - ",pim,"i";
 			SiNo
 				si n4 == 0 Entonces
 					r = (-n2)/(2*n1)
