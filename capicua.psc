@@ -129,6 +129,33 @@ Algoritmo taller
 			Imprimir "ha seleseccionado la opcion 8";
 		9:
 			Imprimir "ha seleseccionado la opcion 9";
+			definir n1, n2, n3 Como Real;
+			Imprimir "ingrese el coeficiente A:";
+			leer n1;
+			Imprimir "ingrese el coeficiente B:";
+			leer n2;
+			Imprimir "ingrese el coeficiente C:";
+			leer n3;
+			
+			n4 = n2^2-4*n1*n3
+			Imprimir d;
+			
+			si n4 < 0 Entonces
+				pre = (-n2)/(2*n1);
+				pim = rc(-n4)/(2*n1);
+				Imprimir "Raiz 1: ",pre,"+",pim,"i";
+				Imprimir "Raiz 2: ",pre,"-",pim,"i";
+			SiNo
+				si n4 == 0 Entonces
+					r = (-n2)/(2*n1)
+					Imprimir "Raiz 1 = Raiz 2: ", r;
+				SiNo
+					r1 = ((-n2)+rc(n4))/(2*n1)
+					r2 = ((-n2)-rc(n4))/(2*n1)
+					Imprimir "Raiz 1: ", r1;
+					Imprimir "Raiz 2: ", r2;
+				FinSi
+			FinSi
 		10:
 			Imprimir "ha seleseccionado la opcion 10";
 			Definir operacion Como Caracter;
