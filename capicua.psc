@@ -53,6 +53,7 @@ Algoritmo taller
 	Escribir "9)  Calcular las raices de la ecuacion de segundo grado"
 	escribir "-------------------------------------------------------------------------------------"
 	Escribir "10) Usar una calculadora que permite realizar las operaciones basicas"
+	escribir "-------------------------------------------------------------------------------------"
 	Imprimir Sin Saltar "Seleccione con el numero lo que quiere hacer"
 	Leer op;
 	Segun op hacer
