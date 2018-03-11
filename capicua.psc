@@ -53,7 +53,6 @@ Algoritmo taller
 	Escribir "9)  Calcular las raices de la ecuacion de segundo grado"
 	escribir "-------------------------------------------------------------------------------------"
 	Escribir "10) Usar una calculadora que permite realizar las operaciones basicas"
-	escribir "-------------------------------------------------------------------------------------"
 	Imprimir Sin Saltar "Seleccione con el numero lo que quiere hacer"
 	Leer op;
 	Segun op hacer
@@ -258,7 +257,7 @@ Algoritmo taller
 								Imprimir "Hay ",contador," numeros coincidentes que son: ", coinc;
 							FinSi
 						SiNo
-							Imprimir "No hay numeros coincidentes"
+							Imprimir "No hay numeros coincidentes, los numeros no coincidentes son: ", noCoinc;
 						FinSi
 					SiNo
 						Imprimir "ERROR! los digitos deben ser diferentes entre si";
