@@ -216,7 +216,7 @@ Algoritmo taller
 			//		numero2[4] = Subcadena(n2,4,4);
 			
 			
-			si abs((ConvertirANumero(n1)))>0 Entonces
+			si (abs((ConvertirANumero(n1)))>0)&&(abs((ConvertirANumero(n2)))>0) Entonces
 				si (Longitud(n1)==4)&&(Longitud(n2)==4) Entonces
 					si ((numero1[1]!=numero1[2])&&(numero1[1]!=numero1[3])&&(numero1[1]!=numero1[4])&&(numero1[2]!=numero1[3])&&(numero1[2]!=numero1[4])&&(numero1[3]!=numero1[4])) && ((numero2[1]!=numero2[2])&&(numero2[1]!=numero2[3])&&(numero2[1]!=numero2[4])&&(numero2[2]!=numero2[3])&&(numero2[2]!=numero2[4])&&(numero2[3]!=numero2[4])) Entonces
 						contador = 0;
@@ -259,7 +259,7 @@ Algoritmo taller
 								Imprimir "Hay ",contador," numeros coincidentes que son: ", coinc;
 							FinSi
 						SiNo
-							Imprimir "No hay numeros coincidentes"
+							Imprimir "No hay numeros coincidentes, los numeros no coincidentes son: ",noCoinc;
 						FinSi
 					SiNo
 						Imprimir "ERROR! los digitos deben ser diferentes entre si";
@@ -384,13 +384,13 @@ Algoritmo taller
 			cd = cb^2-4*ca*cc
 			Imprimir d;
 			
-			si n4 < 0 Entonces
+			si cd < 0 Entonces
 				pre = (-cb)/(2*ca);
 				pim = rc(-cd)/(2*ca);
 				Imprimir "Raiz 1: ",pre," + ",pim,"i";
 				Imprimir "Raiz 2: ",pre," - ",pim,"i";
 			SiNo
-				si n4 == 0 Entonces
+				si cd == 0 Entonces
 					r = (-cb)/(2*ca)
 					Imprimir "Raiz 1 = Raiz 2:+y- ", r;
 				SiNo
