@@ -74,6 +74,28 @@ Algoritmo taller
 			Hasta Que 1==2
 		2:
 			Imprimir "ha seleseccionado la opcion 2";
+			
+			
+			Definir w, q  Como real
+			Definir c, e como entero
+			Escribir "este algoritmo le dira si el mayor es multiplo del menor"
+			escribir "habrá error de no cumplirse que el mayor es multiplo del menor"
+			Repetir
+				
+				leer w, q
+				
+				Si a>b Entonces
+					p=w/q
+					
+					Imprimir c, "el mayor es multiplo del menor"
+				SiNo
+					e=q/w
+					Imprimir d, "el mayor es multiplo del menor"
+				Fin Si
+			Hasta Que 1==3
+
+			
+			
 		3:
 			Imprimir "ha seleseccionado la opcion 3";
 		4:
