@@ -34,7 +34,7 @@ Fin Funcion
 
 Algoritmo taller
 	definir op Como Entero;
-	Imprimir "Seleccione lo que quiere hacer";
+	Imprimir Sin Saltar "Seleccione lo que quiere hacer";
 	Leer op;
 	Segun op hacer
 		1:
@@ -127,46 +127,46 @@ Algoritmo taller
 			Imprimir "ha seleseccionado la opcion 7";
 		8:
 			Imprimir "ha seleseccionado la opcion 8";
-			Definir d,m,a Como Entero;
+			Definir dia,mes,año Como Entero;
 			Imprimir "Este algoritmo recibe una fecha del siglo XXI (2001-2100) calcula el dia siguiente";
-			Imprimir "ingrese el dia";
-			leer d;
-			Imprimir "ingrese el mes";
-			leer m;
-			Imprimir "ingrese el año";
-			leer a;
+			Imprimir Sin Saltar "ingrese el dia";
+			leer dia;
+			Imprimir Sin Saltar "ingrese el mes";
+			leer mes;
+			Imprimir Sin Saltar "ingrese el año";
+			leer año;
 			
-			si (a>=2001)&&(a<=2100)&&(m>0)&&(m<=12)&&(d>0)&&(d<=31) Entonces
+			si (año>=2001)&&(año<=2100)&&(mes>0)&&(mes<=12)&&(dia>0)&&(dia<=31) Entonces
 				
-				si (m==2) Entonces
-					si ((d+1)>28) Entonces
-						d = 1;
-						Imprimir d,"/",(m+1),"/",a;
+				si (mes==2) Entonces
+					si ((dia+1)>28) Entonces
+						dia = 1;
+						Imprimir dia,"/",(mes+1),"/",año;
 					SiNo
-						Imprimir (d+1),"/",m,"/",a;
+						Imprimir (dia+1),"/",mes,"/",año;
 					FinSi
 				FinSi
 				
-				si (m==4)||(m==6)||(m==9)||(m==11) Entonces
-					si ((d+1)>30) Entonces
-						d = 1;
-						Imprimir d,"/",(m+1),"/",a;
+				si (mes==4)||(mes==6)||(mes==9)||(mes==11) Entonces
+					si ((dia+1)>30) Entonces
+						dia = 1;
+						Imprimir dia,"/",(mes+1),"/",año;
 					SiNo
-						Imprimir (d+1),"/",m,"/",a;
+						Imprimir (dia+1),"/",mes,"/",año;
 					FinSi
 				FinSi
 				
-				si (m==1)||(m==3)||(m==5)||(m==7)||(m==8)||(m==10)||(m==12) Entonces
-					si (m==12)&&((d+1)>31) Entonces
-						d=1;
-						m=1;
-						Imprimir d,"/",m,"/",(a+1);
+				si (mes==1)||(mes==3)||(mes==5)||(mes==7)||(mes==8)||(mes==10)||(mes==12) Entonces
+					si (mes==12)&&((dia+1)>31) Entonces
+						dia=1;
+						mes=1;
+						Imprimir dia,"/",mes,"/",(año+1);
 					SiNo
-						si ((d+1)>31) Entonces
-							d = 1;
-							Imprimir d,"/",(m+1),"/",a;
+						si ((dia+1)>31) Entonces
+							dia = 1;
+							Imprimir dia,"/",(mes+1),"/",año;
 						SiNo
-							Imprimir (d+1),"/",m,"/",a;
+							Imprimir (dia+1),"/",mes,"/",año;
 						FinSi
 					FinSi
 				FinSi
@@ -178,11 +178,11 @@ Algoritmo taller
 			Imprimir "ha seleseccionado la opcion 9";
 			Imprimir "este algoritmo calculas las raices de la ecuacion de segundo grado";
 			definir n1, n2, n3 Como Real;
-			Imprimir "ingrese el coeficiente A:";
+			Imprimir Sin Saltar "ingrese el coeficiente A:";
 			leer n1;
-			Imprimir "ingrese el coeficiente B:";
+			Imprimir Sin Saltar "ingrese el coeficiente B:";
 			leer n2;
-			Imprimir "ingrese el coeficiente C:";
+			Imprimir Sin Saltar "ingrese el coeficiente C:";
 			leer n3;
 			
 			n4 = n2^2-4*n1*n3
@@ -209,42 +209,54 @@ Algoritmo taller
 			Imprimir "Este algoritmo es una calculadora que permite realizar las operaciones basicas";
 			Definir operacion Como Caracter;
 			definir n1, n2, resultado Como Entero;
-			Imprimir "Que tipo de operacion desea realizar?";
+			Imprimir Sin Saltar "Que tipo de operacion desea realizar?";
 			leer operacion;
 			
 			si operacion == "S" || operacion == "s" Entonces
-				imprimir "ingrese los numeros que desea sumar: ";
-				leer n1, n2;
+				Imprimir "ha seleccionado suma"
+				Imprimir Sin Saltar "ingrese el primer valor: "
+				leer n1;
+				Imprimir Sin Saltar "ingrese el segundo valor: "
+				leer n2;
 				resultado = n1 + n2;
-				imprimir resultado;
+				imprimir "El resultado de la suma es: ",resultado;
 			FinSi
 			
 			si operacion == "R" || operacion == "r" Entonces
-				imprimir "ingrese los numeros que desea restar: ";
-				leer n1, n2;
+				Imprimir "ha seleccionado resta"
+				Imprimir Sin Saltar "ingrese el primer valor: "
+				leer n1;
+				Imprimir Sin Saltar "ingrese el segundo valor: "
+				leer n2;
 				resultado = n1 - n2;
-				imprimir resultado;
+				imprimir "El resultado de la resta es: ",resultado;
 			FinSi
 			
 			si operacion == "P" || operacion == "p" || operacion == "M" || operacion == "m" Entonces
-				imprimir "ingrese los numeros que desea multiplicar: ";
-				leer n1, n2;
+				Imprimir "ha seleccionado multiplicacion"
+				Imprimir Sin Saltar "ingrese el primer factor: "
+				leer n1;
+				Imprimir Sin Saltar "ingrese el segundo factor: "
+				leer n2;
 				resultado = n1 * n2;
-				imprimir resultado;
+				imprimir "El resultado de la multiplicacion es: ",resultado;
 			FinSi
 			
 			si operacion == "D" || operacion == "d" Entonces
-				imprimir "ingrese los numeros que desea dividir: ";
-				leer n1, n2;
+				Imprimir "ha seleccionado division"
+				Imprimir Sin Saltar "ingrese el primer valor: "
+				leer n1;
+				Imprimir Sin Saltar "ingrese el segundo valor: "
+				leer n2;
 				si n2>0 Entonces
 					resultado = n1/n2;
-					imprimir resultado;
+					imprimir "El resultado de la division es: ",resultado;
 				SiNo
 					Imprimir "no se puede dividir entre cero";
 				FinSi
 			FinSi
 			
-			si operacion != "S" || operacion != "s" || operacion != "R" || operacion != "r" || operacion != "P" || operacion != "p" || operacion != "M" || operacion != "m" || operacion != "D" || operacion != "d" entonces
+			si operacion != "S" && operacion != "s" && operacion != "R" && operacion != "r" && operacion != "P" && operacion != "p" && operacion != "M" && operacion != "m" && operacion != "D" && operacion != "d" entonces
 				Imprimir "Por favor seleccione una operacion valida: "
 			FinSi
 		De Otro Modo:
