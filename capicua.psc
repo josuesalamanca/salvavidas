@@ -32,7 +32,7 @@ Funcion a <- test ( tip )
 	FinSi
 Fin Funcion
 
-Algoritmo Taller
+Algoritmo taller
 	definir op Como Entero;
 	Imprimir "Seleccione lo que quiere hacer";
 	Leer op;
@@ -98,6 +98,26 @@ Algoritmo Taller
 			
 		3:
 			Imprimir "ha seleseccionado la opcion 3";
+			
+			definir r como real
+			leer r
+			
+			si  r%400==0 Entonces
+				Imprimir "es biciesto"
+			SiNo
+				si r%100==0 Entonces
+					
+					Imprimir "no es biciesto"
+					
+				SiNo
+					
+					si r%4==0 Entonces
+						Imprimir "es biciesto"
+					SiNo
+						Imprimir "no es bicisesto"
+					FinSi
+				Fin Si
+			FinSi
 		4:
 			Imprimir "ha seleseccionado la opcion 4";
 		5:
