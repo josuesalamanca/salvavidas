@@ -127,8 +127,56 @@ Algoritmo taller
 			Imprimir "ha seleseccionado la opcion 7";
 		8:
 			Imprimir "ha seleseccionado la opcion 8";
+			Definir d,m,a Como Entero;
+			Imprimir "Este algoritmo recibe una fecha del siglo XXI (2001-2100) calcula el dia siguiente";
+			Imprimir "ingrese el dia";
+			leer d;
+			Imprimir "ingrese el mes";
+			leer m;
+			Imprimir "ingrese el año";
+			leer a;
+			
+			si (a>=2001)&&(a<=2100)&&(m>0)&&(m<=12)&&(d>0)&&(d<=31) Entonces
+				
+				si (m==2) Entonces
+					si ((d+1)>28) Entonces
+						d = 1;
+						Imprimir d,"/",(m+1),"/",a;
+					SiNo
+						Imprimir (d+1),"/",m,"/",a;
+					FinSi
+				FinSi
+				
+				si (m==4)||(m==6)||(m==9)||(m==11) Entonces
+					si ((d+1)>30) Entonces
+						d = 1;
+						Imprimir d,"/",(m+1),"/",a;
+					SiNo
+						Imprimir (d+1),"/",m,"/",a;
+					FinSi
+				FinSi
+				
+				si (m==1)||(m==3)||(m==5)||(m==7)||(m==8)||(m==10)||(m==12) Entonces
+					si (m==12)&&((d+1)>31) Entonces
+						d=1;
+						m=1;
+						Imprimir d,"/",m,"/",(a+1);
+					SiNo
+						si ((d+1)>31) Entonces
+							d = 1;
+							Imprimir d,"/",(m+1),"/",a;
+						SiNo
+							Imprimir (d+1),"/",m,"/",a;
+						FinSi
+					FinSi
+				FinSi
+			SiNo
+				Imprimir "ingrese una fecha valida";
+				Imprimir "el siglo XXI comprende desde 1/01/2001 a 31/12/2100"
+			FinSi
 		9:
 			Imprimir "ha seleseccionado la opcion 9";
+			Imprimir "este algoritmo calculas las raices de la ecuacion de segundo grado";
 			definir n1, n2, n3 Como Real;
 			Imprimir "ingrese el coeficiente A:";
 			leer n1;
@@ -158,6 +206,7 @@ Algoritmo taller
 			FinSi
 		10:
 			Imprimir "ha seleseccionado la opcion 10";
+			Imprimir "Este algoritmo es una calculadora que permite realizar las operaciones basicas";
 			Definir operacion Como Caracter;
 			definir n1, n2, resultado Como Entero;
 			Imprimir "Que tipo de operacion desea realizar?";
@@ -187,8 +236,12 @@ Algoritmo taller
 			si operacion == "D" || operacion == "d" Entonces
 				imprimir "ingrese los numeros que desea dividir: ";
 				leer n1, n2;
-				resultado = n1/n2;
-				imprimir resultado;
+				si n2>0 Entonces
+					resultado = n1/n2;
+					imprimir resultado;
+				SiNo
+					Imprimir "no se puede dividir entre cero";
+				FinSi
 			FinSi
 			
 			si operacion != "S" || operacion != "s" || operacion != "R" || operacion != "r" || operacion != "P" || operacion != "p" || operacion != "M" || operacion != "m" || operacion != "D" || operacion != "d" entonces
