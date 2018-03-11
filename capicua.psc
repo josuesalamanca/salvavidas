@@ -160,6 +160,64 @@ Algoritmo taller
 			
 		6:
 			Imprimir "ha seleseccionado la opcion 6";
+			Definir n1, n2 Como caracter;
+			Repetir
+				Imprimir Sin Saltar "Ingrese el primer numero";
+				leer n1;
+				Imprimir Sin Saltar "Ingrese el segundo numero";
+				leer n2;
+				
+				Dimension numero1[4];
+				Dimension numero2[4]
+				
+				numero1[1] = Subcadena(n1,1,1);
+				numero1[2] = Subcadena(n1,2,2);
+				numero1[3] = Subcadena(n1,3,3);
+				numero1[4] = Subcadena(n1,4,4);
+				
+				numero2[1] = Subcadena(n2,1,1);
+				numero2[2] = Subcadena(n2,2,2);
+				numero2[3] = Subcadena(n2,3,3);
+				numero2[4] = Subcadena(n2,4,4);
+				
+				
+				si abs((ConvertirANumero(n1)))>0 Entonces
+					si (Longitud(n1)==4)&&(Longitud(n2)==4) Entonces
+						si ((numero1[1]!=numero1[2])&&(numero1[1]!=numero1[3])&&(numero1[1]!=numero1[4])&&(numero1[2]!=numero1[3])&&(numero1[2]!=numero1[4])&&(numero1[3]!=numero1[4])) && ((numero2[1]!=numero2[2])&&(numero2[1]!=numero2[3])&&(numero2[1]!=numero2[4])&&(numero2[2]!=numero2[3])&&(numero2[2]!=numero2[4])&&(numero2[3]!=numero2[4])) Entonces
+							contador = 0;
+							Dimension posCoinc[4];
+							//					Dimension posNoCoinc[4];
+							Para i=1 Hasta 4 Con Paso 1 Hacer
+								si numero1[i]==numero2[i] Entonces
+									contador = contador + 1;
+									posCoinc[i] = numero1[i];
+								FinSi
+							Fin Para
+							
+							si contador != 0 Entonces
+								si contador == 1
+									Imprimir "Hay ",contador," numero coincidente que es: ", posCoinc[1];
+								FinSi
+								si contador == 2
+									Imprimir "Hay ",contador," numeros coincidentes que son: ", posCoinc[1],", ",posCoinc[2];
+								FinSi
+								si contador == 3
+									Imprimir "Hay ",contador," numeros coincidentes que son: ", posCoinc[1],", ",posCoinc[2],", ",posCoinc[3];
+								FinSi
+								si contador == 4
+									Imprimir "Hay ",contador," numeros coincidentes que son: ", posCoinc[1],", ",posCoinc[2],", ",posCoinc[3],", ",posCoinc[4];
+								FinSi
+							SiNo
+								Imprimir "No hay numeros coincidentes"
+							FinSi
+						SiNo
+							Imprimir "ERROR! los digitos deben ser diferentes entre si";
+						FinSi
+					SiNo
+						Imprimir "ERROR! Los numeros deben tener 4 digitos";
+					FinSi
+				FinSi
+			Hasta Que 1==2
 		7:
 			Imprimir "ha seleseccionado la opcion 7";
 			Imprimir "Este algoritmo calcula la comision que obtiene un vendedor";
@@ -255,29 +313,29 @@ Algoritmo taller
 		9:
 			Imprimir "ha seleseccionado la opcion 9";
 			Imprimir "este algoritmo calculas las raices de la ecuacion de segundo grado";
-			definir n1, n2, n3 Como Real;
+			definir ca, cb, cc Como Real;
 			Imprimir Sin Saltar "ingrese el coeficiente A:";
-			leer n1;
+			leer ca;
 			Imprimir Sin Saltar "ingrese el coeficiente B:";
-			leer n2;
+			leer cb;
 			Imprimir Sin Saltar "ingrese el coeficiente C:";
-			leer n3;
+			leer cc;
 			
-			n4 = n2^2-4*n1*n3
+			cd = cb^2-4*ca*cc
 			Imprimir d;
 			
 			si n4 < 0 Entonces
-				pre = (-n2)/(2*n1);
-				pim = rc(-n4)/(2*n1);
+				pre = (-cb)/(2*ca);
+				pim = rc(-cd)/(2*ca);
 				Imprimir "Raiz 1: ",pre," + ",pim,"i";
 				Imprimir "Raiz 2: ",pre," - ",pim,"i";
 			SiNo
 				si n4 == 0 Entonces
-					r = (-n2)/(2*n1)
+					r = (-cb)/(2*ca)
 					Imprimir "Raiz 1 = Raiz 2: ", r;
 				SiNo
-					r1 = ((-n2)+rc(n4))/(2*n1)
-					r2 = ((-n2)-rc(n4))/(2*n1)
+					r1 = ((-cb)+rc(cd))/(2*ca)
+					r2 = ((-cb)-rc(cd))/(2*ca)
 					Imprimir "Raiz 1: ", r1;
 					Imprimir "Raiz 2: ", r2;
 				FinSi
@@ -286,7 +344,7 @@ Algoritmo taller
 			Imprimir "ha seleseccionado la opcion 10";
 			Imprimir "Este algoritmo es una calculadora que permite realizar las operaciones basicas";
 			Definir operacion Como Caracter;
-			definir n1, n2, resultado Como Entero;
+			definir op1, op2, resultado Como Entero;
 			Imprimir Sin Saltar "Que tipo de operacion desea realizar?";
 			leer operacion;
 			
@@ -296,7 +354,7 @@ Algoritmo taller
 				leer n1;
 				Imprimir Sin Saltar "ingrese el segundo valor: "
 				leer n2;
-				resultado = n1 + n2;
+				resultado = op1 + op2;
 				imprimir "El resultado de la suma es: ",resultado;
 			FinSi
 			
@@ -306,7 +364,7 @@ Algoritmo taller
 				leer n1;
 				Imprimir Sin Saltar "ingrese el segundo valor: "
 				leer n2;
-				resultado = n1 - n2;
+				resultado = op1 - op2;
 				imprimir "El resultado de la resta es: ",resultado;
 			FinSi
 			
@@ -316,7 +374,7 @@ Algoritmo taller
 				leer n1;
 				Imprimir Sin Saltar "ingrese el segundo factor: "
 				leer n2;
-				resultado = n1 * n2;
+				resultado = op1 * op2;
 				imprimir "El resultado de la multiplicacion es: ",resultado;
 			FinSi
 			
@@ -326,8 +384,8 @@ Algoritmo taller
 				leer n1;
 				Imprimir Sin Saltar "ingrese el segundo valor: "
 				leer n2;
-				si n2>0 Entonces
-					resultado = n1/n2;
+				si op2>0 Entonces
+					resultado = op1/op2;
 					imprimir "El resultado de la division es: ",resultado;
 				SiNo
 					Imprimir "no se puede dividir entre cero";
