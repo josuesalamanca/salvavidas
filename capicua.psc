@@ -34,11 +34,32 @@ Fin Funcion
 
 Algoritmo taller
 	definir op Como Entero;
-	Imprimir Sin Saltar "Seleccione lo que quiere hacer"
+	Escribir "1)  Leer un numero y saber si es o no capicua"
+	Escribir "-------------------------------------------------------------------------------------"
+	Escribir "2)  Digitar un numero y saber s el mayor es multiplo del menor"
+	Escribir "-------------------------------------------------------------------------------------"
+	Escribir "3)  Digitar un año y saber si es biciesto o no"
+	Escribir "-------------------------------------------------------------------------------------"
+	Escribir "4)  Digitar 3 numeros y saber si existen numeros iguales"
+	Escribir "-------------------------------------------------------------------------------------"
+	Escribir "5)  Según 3 notas saber si aprueba o reprueba"
+	escribir "-------------------------------------------------------------------------------------"
+	Escribir "6)  Saber si existen numeros concidientes y no concidientes"
+	escribir "-------------------------------------------------------------------------------------"
+	Escribir "7)  Calcular la comision que obtiene un vendedor"
+	escribir "-------------------------------------------------------------------------------------"
+	Escribir "8)  Recibir una fecha del siglo XXI (2001-2100) y calcular el dia siguiente"
+	escribir "-------------------------------------------------------------------------------------"
+	Escribir "9)  Calcular las raices de la ecuacion de segundo grado"
+	escribir "-------------------------------------------------------------------------------------"
+	Escribir "10) Usar una calculadora que permite realizar las operaciones basicas"
+	Imprimir Sin Saltar "Seleccione con el numero lo que quiere hacer"
 	Leer op;
 	Segun op hacer
 		1:
 			Imprimir "ha seleseccionado la opcion 1";
+			Escribir "digite un numero de tres cifras"
+			Escribir "el programa le dirá si es capicua o no"
 			
 			Definir ctam como entero
 			Definir a, b, c, d Como Caracter
@@ -97,8 +118,11 @@ Algoritmo taller
 			
 		3:
 			Imprimir "ha seleseccionado la opcion 3";
+			Escribir "digite un año"
+			Escribir "el programa le dirá si es biciesto o no"
 			
 			definir r como real
+			repetir
 			leer r
 			
 			si  r%400==0 Entonces
@@ -117,6 +141,7 @@ Algoritmo taller
 					FinSi
 				Fin Si
 			FinSi
+		Hasta Que 1==2
 		4:
 			Imprimir "ha seleseccionado la opcion 4";
 			
@@ -160,6 +185,8 @@ Algoritmo taller
 			
 		6:
 			Imprimir "ha seleseccionado la opcion 6";
+			escribir "este programa le dira si existen numeros concidientes y no concidientes"
+			escribir "en un numero de 4 cifras"
 			Definir n1, n2 Como caracter;
 			Repetir
 				Imprimir Sin Saltar "Ingrese el primer numero";
@@ -216,10 +243,13 @@ Algoritmo taller
 		7:
 			Imprimir "ha seleseccionado la opcion 7";
 			Imprimir "Este algoritmo calcula la comision que obtiene un vendedor";
+			Repetir
+				
+			
 			Definir nombreCliente Como Caracter;
 			Definir valorUnitario Como Real;
 			Definir cantidadVendida Como Entero;
-			
+		
 			Imprimir Sin Saltar "Ingrese el nombre del cliente: ";
 			leer nombreCliente;
 			Imprimir Sin Saltar "Ingrese el valor por unidad de la paca de cemento: ";
@@ -256,10 +286,12 @@ Algoritmo taller
 				Imprimir "el valor total de la venta es: ",totalVenta;
 				Imprimir "la comision por esta venta es del 6%, que es: ", comision;
 			FinSi
+		Hasta Que 1==2
 		8:
 			Imprimir "ha seleseccionado la opcion 8";
 			Definir dia,mes,año Como Entero;
 			Imprimir "Este algoritmo recibe una fecha del siglo XXI (2001-2100) calcula el dia siguiente";
+			repetir
 			Imprimir Sin Saltar "ingrese el dia";
 			leer dia;
 			Imprimir Sin Saltar "ingrese el mes";
@@ -305,10 +337,14 @@ Algoritmo taller
 				Imprimir "ingrese una fecha valida";
 				Imprimir "el siglo XXI comprende desde 1/01/2001 a 31/12/2100"
 			FinSi
+		Hasta Que 1==2
 		9:
 			Imprimir "ha seleseccionado la opcion 9";
 			Imprimir "este algoritmo calculas las raices de la ecuacion de segundo grado";
 			definir ca, cb, cc Como Real;
+			Repetir
+				
+			
 			Imprimir Sin Saltar "ingrese el coeficiente A:";
 			leer ca;
 			Imprimir Sin Saltar "ingrese el coeficiente B:";
@@ -327,7 +363,7 @@ Algoritmo taller
 			SiNo
 				si n4 == 0 Entonces
 					r = (-cb)/(2*ca)
-					Imprimir "Raiz 1 = Raiz 2: ", r;
+					Imprimir "Raiz 1 = Raiz 2:+y- ", r;
 				SiNo
 					r1 = ((-cb)+rc(cd))/(2*ca)
 					r2 = ((-cb)-rc(cd))/(2*ca)
@@ -335,52 +371,54 @@ Algoritmo taller
 					Imprimir "Raiz 2: ", r2;
 				FinSi
 			FinSi
+		Hasta Que 1==2
 		10:
 			Imprimir "ha seleseccionado la opcion 10";
 			Imprimir "Este algoritmo es una calculadora que permite realizar las operaciones basicas";
 			Definir operacion Como Caracter;
-			definir op1, op2, resultado Como Entero;
+			definir o1, o2, resultado Como Entero;
+			repetir
 			Imprimir Sin Saltar "Que tipo de operacion desea realizar?";
 			leer operacion;
 			
 			si operacion == "S" || operacion == "s" Entonces
 				Imprimir "ha seleccionado suma"
 				Imprimir Sin Saltar "ingrese el primer valor: "
-				leer n1;
+				leer o1;
 				Imprimir Sin Saltar "ingrese el segundo valor: "
-				leer n2;
-				resultado = op1 + op2;
+				leer o2;
+				resultado = o1 + o2;
 				imprimir "El resultado de la suma es: ",resultado;
 			FinSi
 			
 			si operacion == "R" || operacion == "r" Entonces
 				Imprimir "ha seleccionado resta"
 				Imprimir Sin Saltar "ingrese el primer valor: "
-				leer n1;
+				leer o1;
 				Imprimir Sin Saltar "ingrese el segundo valor: "
-				leer n2;
-				resultado = op1 - op2;
+				leer o2;
+				resultado = o1 - o2;
 				imprimir "El resultado de la resta es: ",resultado;
 			FinSi
 			
 			si operacion == "P" || operacion == "p" || operacion == "M" || operacion == "m" Entonces
 				Imprimir "ha seleccionado multiplicacion"
 				Imprimir Sin Saltar "ingrese el primer factor: "
-				leer n1;
+				leer o1;
 				Imprimir Sin Saltar "ingrese el segundo factor: "
-				leer n2;
-				resultado = op1 * op2;
+				leer o2;
+				resultado = o1 * o2;
 				imprimir "El resultado de la multiplicacion es: ",resultado;
 			FinSi
 			
 			si operacion == "D" || operacion == "d" Entonces
 				Imprimir "ha seleccionado division"
 				Imprimir Sin Saltar "ingrese el primer valor: "
-				leer n1;
+				leer o1;
 				Imprimir Sin Saltar "ingrese el segundo valor: "
-				leer n2;
-				si op2>0 Entonces
-					resultado = op1/op2;
+				leer o2;
+				si o2>0 Entonces
+					resultado = o1/o2;
 					imprimir "El resultado de la division es: ",resultado;
 				SiNo
 					Imprimir "no se puede dividir entre cero";
@@ -392,5 +430,6 @@ Algoritmo taller
 			FinSi
 		De Otro Modo:
 			Imprimir "Por favor seleccione una opcion valida";
+			hasta que 1==2
 	FinSegun
 FinAlgoritmo
