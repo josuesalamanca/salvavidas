@@ -385,14 +385,16 @@ Algoritmo taller
 			Imprimir d;
 			
 			si cd < 0 Entonces
-				pre = (-cb)/(2*ca);
-				pim = rc(-cd)/(2*ca);
-				Imprimir "Raiz 1: ",pre," + ",pim,"i";
-				Imprimir "Raiz 2: ",pre," - ",pim,"i";
+//				pre = (-cb)/(2*ca);
+//				pim = rc(-cd)/(2*ca);
+//				Imprimir "Raiz 1: ",pre," + ",pim,"i";
+//				Imprimir "Raiz 2: ",pre," - ",pim,"i";
+				
+				Imprimir "las raices no existen"
 			SiNo
 				si cd == 0 Entonces
 					r = (-cb)/(2*ca)
-					Imprimir "Raiz 1 = Raiz 2:+y- ", r;
+					Imprimir "Raiz 1 = Raiz 2: ", r;
 				SiNo
 					r1 = ((-cb)+rc(cd))/(2*ca)
 					r2 = ((-cb)-rc(cd))/(2*ca)
