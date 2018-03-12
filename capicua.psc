@@ -448,6 +448,9 @@ Algoritmo taller
 				leer o1;
 				Imprimir Sin Saltar "ingrese el segundo valor: "
 				leer o2;
+				si o1==0 y o2==0 entonces
+					Imprimir "error aritmetico, ella no te ama"
+				FinSi
 				si o2>0 Entonces
 					resultado = o1/o2;
 					imprimir "El resultado de la division es: ",resultado;
