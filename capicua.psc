@@ -449,7 +449,7 @@ Algoritmo taller
 				Imprimir Sin Saltar "ingrese el segundo valor: "
 				leer o2;
 				si o1==0 y o2==0 entonces
-					Imprimir "error aritmetico, ella no te ama"
+					Imprimir "error aritmetico"
 				FinSi
 				si o2>0 Entonces
 					resultado = o1/o2;
