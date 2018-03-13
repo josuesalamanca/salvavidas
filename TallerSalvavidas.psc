@@ -60,6 +60,10 @@ Algoritmo taller
 	Definir resultado como real
 	
 	definir op Como Entero;
+	repetir
+		
+	
+	
 	Escribir "1)  Leer un numero y saber si es o no capicua"
 	Escribir "-------------------------------------------------------------------------------------"
 	Escribir "2)  Digitar un numero y saber s el mayor es multiplo del menor"
@@ -489,5 +493,6 @@ Algoritmo taller
 		
 		De Otro Modo:
 			Imprimir "Por favor seleccione una opcion valida";
-			FinSegun
+	FinSegun
+Hasta Que 1==2
 FinAlgoritmo
