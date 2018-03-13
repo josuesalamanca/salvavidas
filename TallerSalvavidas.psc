@@ -138,7 +138,7 @@ Algoritmo taller
 					
 					Imprimir d, "el mayor no es multiplo del menor"
 				Fin Si
-			Hasta Que 1==3
+			
 
 			
 			
