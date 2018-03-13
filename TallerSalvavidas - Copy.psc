@@ -32,33 +32,7 @@ Funcion a <- test ( tip )
 	FinSi
 Fin Funcion
 //la funcion anterior es una herramienta para verificar que los caracteres se comporten como numeros 
-Algoritmo taller 
-	
-	Definir ctam como entero
-	Definir a, b, c, d Como Caracter
-	
-	Definir w, q  Como real
-	
-	definir r como real
-	
-	Definir t, u, k Como Real
-	
-	Definir f, p, s Como Real
-	
-	Definir n1, n2 Como caracter;
-	
-	Definir nombreCliente Como Caracter;
-	Definir valorUnitario Como Real;
-	Definir cantidadVendida Como Entero;
-	
-	Definir dia,mes,año Como Entero;
-	
-	definir ca, cb, cc Como Real;
-	
-	Definir operacion Como Caracter;
-	definir o1, o2 Como Entero;
-	Definir resultado como real
-	
+Algoritmo taller
 	definir op Como Entero;
 	Escribir "1)  Leer un numero y saber si es o no capicua"
 	Escribir "-------------------------------------------------------------------------------------"
@@ -88,9 +62,10 @@ Algoritmo taller
 			Escribir "digite un numero de tres cifras"
 			Escribir "el programa le dirá si es capicua o no"
 			
+			Definir ctam como entero
+			Definir a, b, c, d Como Caracter
 			
-			
-			
+			Repetir
 				sm = 0
 				leer a
 				
@@ -118,16 +93,16 @@ Algoritmo taller
 					
 					
 				FinSi
-			
+			Hasta Que 1==2
 		2:
 			Imprimir "ha seleseccionado la opcion 2";
 			
 			
-			
+			Definir w, q  Como real
 			Escribir "digite dos numeros"
 			Escribir "este algoritmo le dira si el mayor es multiplo del menor"
 			
-			
+			Repetir
 				
 				leer w, q
 				
@@ -147,8 +122,8 @@ Algoritmo taller
 			Escribir "digite un año"
 			Escribir "el programa le dirá si es biciesto o no"
 			
-			
-			
+			definir r como real
+			repetir
 			leer r
 			
 			si  r%400==0 Entonces
@@ -167,15 +142,15 @@ Algoritmo taller
 					FinSi
 				Fin Si
 			FinSi
-		
+		Hasta Que 1==2
 		4:
 			Imprimir "ha seleseccionado la opcion 4";
 			
 			Escribir "digite 3 numeros"
 			Escribir "El progrma le dira si existen numeros iguales o si no"
+			Definir t, u, k Como Real
 			
-			
-			
+			Repetir
 				
 				leer t, u, k
 				si t==u y u==k Entonces
@@ -188,15 +163,15 @@ Algoritmo taller
 					FinSi
 				FinSi
 				
-			
+			Hasta Que 1==2
 			
 		5:
 			Imprimir "ha seleseccionado la opcion 5";
 			
-			
+			Definir f, p, s Como Real
 			escribir "digite las 3 notas del alumno"
 			Escribir "El programa le dirá si el alumno aprueba o reprueba el curso"
-			
+			Repetir
 				leer f, p, s
 				
 				g=(f+p+s)/3
@@ -207,13 +182,13 @@ Algoritmo taller
 					imprimir "reprobó el curso"
 				FinSi
 				
-			
+			Hasta Que 1==2
 			
 		6:
 			Imprimir "ha seleseccionado la opcion 6";
 			escribir "este programa le dira si existen numeros concidientes y no concidientes"
 			escribir "en un numero de 4 cifras"
-			
+			Definir n1, n2 Como caracter;
 	
 			Imprimir Sin Saltar "Ingrese el primer numero";
 			leer n1;
@@ -297,10 +272,12 @@ Algoritmo taller
 		7:
 			Imprimir "ha seleseccionado la opcion 7";
 			Imprimir "Este algoritmo calcula la comision que obtiene un vendedor";
-			
+			Repetir
 				
 			
-			
+			Definir nombreCliente Como Caracter;
+			Definir valorUnitario Como Real;
+			Definir cantidadVendida Como Entero;
 		
 			Imprimir Sin Saltar "Ingrese el nombre del cliente: ";
 			leer nombreCliente;
@@ -338,12 +315,12 @@ Algoritmo taller
 				Imprimir "el valor total de la venta es: ",totalVenta;
 				Imprimir "la comision por esta venta es del 6%, que es: ", comision;
 			FinSi
-		
+		Hasta Que 1==2
 		8:
 			Imprimir "ha seleseccionado la opcion 8";
-			
+			Definir dia,mes,año Como Entero;
 			Imprimir "Este algoritmo recibe una fecha del siglo XXI (2001-2100) calcula el dia siguiente";
-			
+			repetir
 			Imprimir Sin Saltar "ingrese el dia";
 			leer dia;
 			Imprimir Sin Saltar "ingrese el mes";
@@ -389,12 +366,12 @@ Algoritmo taller
 				Imprimir "ingrese una fecha valida";
 				Imprimir "el siglo XXI comprende desde 1/01/2001 a 31/12/2100"
 			FinSi
-		
+		Hasta Que 1==2
 		9:
 			Imprimir "ha seleseccionado la opcion 9";
 			Imprimir "este algoritmo calcula las raices de la ecuacion de segundo grado";
-			
-			
+			definir ca, cb, cc Como Real;
+			Repetir
 				
 			
 			Imprimir Sin Saltar "ingrese el coeficiente A:";
@@ -425,13 +402,15 @@ Algoritmo taller
 					Imprimir "Raiz 2: ", r2;
 				FinSi
 			FinSi
-		
+		Hasta Que 1==2
 		10:
 			Imprimir "ha seleseccionado la opcion 10";
 			Imprimir "Este algoritmo es una calculadora que permite realizar las operaciones basicas";
 			Imprimir "introdusca le primera letra de la operación a realizar"
-			
-		
+			Definir operacion Como Caracter;
+			definir o1, o2 Como Entero;
+			Definir resultado como real
+		repetir
 			Imprimir Sin Saltar "Que tipo de operacion desea realizar?";
 			leer operacion;
 			
@@ -485,7 +464,7 @@ Algoritmo taller
 			si operacion != "S" && operacion != "s" && operacion != "R" && operacion != "r" && operacion != "P" && operacion != "p" && operacion != "M" && operacion != "m" && operacion != "D" && operacion != "d" entonces
 				Imprimir "Por favor seleccione una operacion valida: "
 			FinSi
-		
+		hasta que 1==2
 		
 		De Otro Modo:
 			Imprimir "Por favor seleccione una opcion valida";
