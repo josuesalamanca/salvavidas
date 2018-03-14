@@ -69,7 +69,7 @@ Algoritmo taller
 	Escribir "-------------------------------------------------------------------------------------"
 	Escribir "2)  Digitar un numero y saber s el mayor es multiplo del menor"
 	Escribir "-------------------------------------------------------------------------------------"
-	Escribir "3)  Digitar un año y saber si es biciesto o no"
+	Escribir "3)  Digitar un año y saber si es bisiesto o no"
 	Escribir "-------------------------------------------------------------------------------------"
 	Escribir "4)  Digitar 3 numeros y saber si existen numeros iguales"
 	Escribir "-------------------------------------------------------------------------------------"
@@ -150,25 +150,25 @@ Algoritmo taller
 		3:
 			Imprimir "ha seleseccionado la opcion 3";
 			Escribir "digite un año"
-			Escribir "el programa le dirá si es biciesto o no"
+			Escribir "el programa le dirá si es bisiesto o no"
 			
 			
 			
 			leer r
 			
 			si  r%400==0 Entonces
-				Imprimir "es biciesto"
+				Imprimir "es bisiesto"
 			SiNo
 				si r%100==0 Entonces
 					
-					Imprimir "no es biciesto"
+					Imprimir "no es bisiesto"
 					
 				SiNo
 					
 					si r%4==0 Entonces
-						Imprimir "es biciesto"
+						Imprimir "es bisiesto"
 					SiNo
-						Imprimir "no es bicisesto"
+						Imprimir "no es bisiesto"
 					FinSi
 				Fin Si
 			FinSi
