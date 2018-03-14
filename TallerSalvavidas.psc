@@ -63,7 +63,8 @@ Algoritmo taller
 	repetir
 		
 	
-	
+	Escribir " "
+	Escribir "-------------------------------------------------------------------------------------"
 	Escribir "1)  Leer un numero y saber si es o no capicua"
 	Escribir "-------------------------------------------------------------------------------------"
 	Escribir "2)  Digitar un numero y saber s el mayor es multiplo del menor"
@@ -248,31 +249,43 @@ Algoritmo taller
 			si (abs((ConvertirANumero(n1)))>0)&&(abs((ConvertirANumero(n2)))>0) Entonces
 				si (Longitud(n1)==4)&&(Longitud(n2)==4) Entonces
 					si ((numero1[1]!=numero1[2])&&(numero1[1]!=numero1[3])&&(numero1[1]!=numero1[4])&&(numero1[2]!=numero1[3])&&(numero1[2]!=numero1[4])&&(numero1[3]!=numero1[4])) && ((numero2[1]!=numero2[2])&&(numero2[1]!=numero2[3])&&(numero2[1]!=numero2[4])&&(numero2[2]!=numero2[3])&&(numero2[2]!=numero2[4])&&(numero2[3]!=numero2[4])) Entonces
+						
 						contador = 0;
-						Dimension posCoinc[tamañoDato];
-						Dimension posNoCoinc[tamañoDato];
+						
+//						Dimension posCoinc[tamañoDato];
+//						Dimension posNoCoinc[tamañoDato];
 						
 						coinc = "";
 						noCoinc = "";
 						
-						Para i=1 Hasta 4 Con Paso 1 Hacer
+						para i=1 hasta 4 con paso 1 hacer
 							si numero1[i]==numero2[i] Entonces
 								contador = contador + 1;
-								posCoinc[i] = numero1[i];
+								coinc = coinc + numero1[i] + ", ";
 							SiNo
-								posNoCoinc[i] = numero1[i];
+								noCoinc = noCoinc + numero1[i] + ", ";
 							FinSi
-						Fin Para
-						
-						para j=1 Hasta 4 con paso 1 hacer
-							si posCoinc[j]!="" Entonces
-								coinc = coinc + posCoinc[j] + ", "	
-							FinSi
-							si posNocoinc[j]!="" entonces
-								noCoinc = noCoinc + posNoCoinc[j] + ", ";
-							FinSi
-							
 						FinPara
+						
+						
+//						Para i=1 Hasta 4 Con Paso 1 Hacer
+//							si numero1[i]==numero2[i] Entonces
+//								contador = contador + 1;
+//								posCoinc[i] = numero1[i];
+//							SiNo
+//								posNoCoinc[i] = numero1[i];
+//							FinSi
+//						Fin Para
+//						
+//						para j=1 Hasta 4 con paso 1 hacer
+//							si posCoinc[j]!="" Entonces
+//								coinc = coinc + posCoinc[j] + ", "	
+//							FinSi
+//							si posNocoinc[j]!="" entonces
+//								noCoinc = noCoinc + posNoCoinc[j] + ", ";
+//							FinSi
+//							
+//						FinPara
 						
 						si contador != 0 Entonces
 							si contador == 1
