@@ -371,11 +371,22 @@ Algoritmo taller
 			si (año>=2001)&&(año<=2100)&&(mes>0)&&(mes<=12)&&(dia>0)&&(dia<=31) Entonces
 				
 				si (mes==2) Entonces
-					si ((dia+1)>28) Entonces
-						dia = 1;
-						Imprimir dia,"/",(mes+1),"/",año;
+					si año%400 == 0 || año%4 == 0 Entonces
+						si ((dia+1)>29) Entonces
+							dia = 1;
+							Imprimir dia,"/",(mes+1),"/",año;
+							Imprimir "es año bisiesto";
+						SiNo
+							Imprimir (dia+1),"/",mes,"/",año;
+							Imprimir "es año bisiesto";
+						FinSi
 					SiNo
-						Imprimir (dia+1),"/",mes,"/",año;
+						si ((dia+1)>28) Entonces
+							dia = 1;
+							Imprimir dia,"/",(mes+1),"/",año;
+						SiNo
+							Imprimir (dia+1),"/",mes,"/",año;
+						FinSi
 					FinSi
 				FinSi
 				
